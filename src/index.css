@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Navbar */
+.active{
+    background-color: rgb(88, 139, 88) !important;
+    width: fit-content;
+    /* color: white !important; */
 }
+.nav-link:focus, .nav-link:hover {
+    color: rgb(255 255 255) !important;
+}
+/* home */
+.solid-line{
+    width: 80px;
+    height: 1px;
+    border: 2px solid white;
+}
+.solid-line-black{
+    width: 80px;
+    height: 1px;
+    border: 2px solid black;
+}
+/* portfolio */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+#lightBox{
+
+    position: fixed;
+    /* content: ''; */
+    background-color: rgba(241, 8, 8, 0.6);
+    /* position: absolute; */
+    opacity: 0.9;
+    width: 1980px;
+    height: 1141px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999;
+    /* background-color: rgb(31, 85, 161); */
+    /* background-size: cover; */
+}
+#item{
+    position: absolute;
+    /* width: 400px; */
+    /* height: 400px; */
+    opacity: 0.6;
+
+    width: 1980px;
+    height: 1141px;
+    z-index: 99999999;
+    background-size: cover;
+    background-color: rgba(241, 8, 8, 0.6);
+}
+.test{
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+.test:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+/* contact */
+.contact, .portfolio, .about, .home{
+    padding: 130px 0 130px 0;
+}
+input{
+    width: 50%;
+}
+.form-control:focus {
+    border-color: rgba(13, 109, 253, 0.342) !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 109, 253, 0) !important;
 }
