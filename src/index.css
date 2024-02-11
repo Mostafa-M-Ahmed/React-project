@@ -19,38 +19,6 @@
     border: 2px solid black;
 }
 /* portfolio */
-
-
-
-#lightBox{
-
-    position: fixed;
-    /* content: ''; */
-    background-color: rgba(241, 8, 8, 0.6);
-    /* position: absolute; */
-    opacity: 0.9;
-    width: 1980px;
-    height: 1141px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999999;
-    /* background-color: rgb(31, 85, 161); */
-    /* background-size: cover; */
-}
-#item{
-    position: absolute;
-    /* width: 400px; */
-    /* height: 400px; */
-    opacity: 0.6;
-
-    width: 1980px;
-    height: 1141px;
-    z-index: 99999999;
-    background-size: cover;
-    background-color: rgba(241, 8, 8, 0.6);
-}
 .test{
     opacity: 0;
     transition: 0.6s ease-in-out;

@@ -2,29 +2,33 @@ import React from 'react'
 import pic1 from '../../Images/port1.png'
 import pic2 from '../../Images/port2.png'
 import pic3 from '../../Images/port3.png'
-import { useState } from 'react'
 
 export default function Portfolio() {
-const [show, setShow] = useState(false)
 
-function display(img){
-  console.log(img);
-  // document.getElementById('lightBox').classList.replace('d-none','d-block')
-}
+  function display(img) {
+    let x = document.getElementById('modalBTN');
+    let y = document.getElementById('modalID');
+    y.setAttribute('src', img)
+    x.click()
+  }
 
   return (
     <>
-  {/* {show && <div id="ligthBox" className='d-none align-items-center justify-content-center'>
-      <div id="item" className='d-flex align-items-center position-relative justify-content-center'>       
+
+      <div>
+        <button id='modalBTN' type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-">
+              <div class="modal-body">
+                <img id='modalID' className='w-100 rounded' alt="" />
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>} */}
-
-
-    <div id="ligthBox" className='d-none align-items-center justify-content-center'>
-      <div id="item" className='d-flex align-items-center justify-content-center'>       
-      </div>
-    </div>
-
 
 
       <div className='portfolio bg-body-tertiary min-vh-100 text-center d-flex justify-content-center align-items-center'>
@@ -38,11 +42,11 @@ function display(img){
             </div>
           </div>
           {/* row-cols-lg-6 */}
-          <div className="row" id="Roww"> 
-          <div className="col-lg-4 col-md-6 mb-5">
+          <div className="row" id="Roww">
+            <div className="col-lg-4 col-md-6 mb-5">
               <div className="position-relative">
                 <img src={pic1} className='w-100 rounded' alt="" />
-                <div onClick={()=>display(pic1)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
+                <div onClick={() => display(pic1)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
                   <i className='fa-solid fa-plus text-white fa-6x'></i>
                 </div>
               </div>
@@ -50,7 +54,7 @@ function display(img){
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="position-relative">
                 <img src={pic2} className='w-100 rounded' alt="" />
-                <div onClick={()=>display(pic2)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
+                <div onClick={() => display(pic2)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
                   <i className='fa-solid fa-plus text-white fa-6x'></i>
                 </div>
               </div>
@@ -58,7 +62,7 @@ function display(img){
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="position-relative">
                 <img src={pic3} className='w-100 rounded' alt="" />
-                <div onClick={()=>display(pic3)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
+                <div onClick={() => display(pic3)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
                   <i className='fa-solid fa-plus text-white fa-6x'></i>
                 </div>
               </div>
@@ -66,7 +70,7 @@ function display(img){
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="position-relative">
                 <img src={pic1} className='w-100 rounded' alt="" />
-                <div onClick={()=>display(pic1)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
+                <div onClick={() => display(pic1)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
                   <i className='fa-solid fa-plus text-white fa-6x'></i>
                 </div>
               </div>
@@ -74,7 +78,7 @@ function display(img){
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="position-relative">
                 <img src={pic2} className='w-100 rounded' alt="" />
-                <div onClick={()=>display(pic2)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
+                <div onClick={() => display(pic2)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
                   <i className='fa-solid fa-plus text-white fa-6x'></i>
                 </div>
               </div>
@@ -82,7 +86,7 @@ function display(img){
             <div className="col-lg-4 col-md-6 mb-5">
               <div className="position-relative">
                 <img src={pic3} className='w-100 rounded' alt="" />
-                <div onClick={()=>display(pic3)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
+                <div onClick={() => display(pic3)} className='test rounded position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center bg-success'>
                   <i className='fa-solid fa-plus text-white fa-6x'></i>
                 </div>
               </div>
